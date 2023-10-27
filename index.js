@@ -32,11 +32,12 @@ inquirer
 };
 
 renderPage(shape, colour){
+    let pageBody = "";
     if (shape === ""||colour === ""){
         return `Please enter proper data`
     }
-    else{
-        let pageBody = 
+    else if (shape === 'circle'){
+        pageBody = 
         `<html>
             <body>
 
@@ -48,12 +49,39 @@ renderPage(shape, colour){
 
             </body>
         </html>`
-    
+    }
+    else if (shape === 'square'){
+        pageBody = 
+        `<html>
+            <body>
+
+            <h1>My first SVG</h1>
+
+                <svg width="400" height="180">
+                    <rect x="50" y="20" width="150" height="150"
+                    style="fill:${colour};stroke:${colour};stroke-width:5;fill-opacity:1.0;stroke-opacity:0.9" />
+                </svg>
+            </body>
+        </html>`
+    }
+    else if (shape === 'triangle'){
+        pageBody = 
+        `<html>
+            <body>
+
+            <h1>My first SVG</h1>
+                <svg height="210" width="500">
+                    <polygon points="200,210 400,210 300,10" style="fill:${colour};stroke:${colour};stroke-width:1" />
+                </svg>
+            </body>
+        </html>`
+    }
+ 
     writeFile('test.html', pageBody)
         .then(() => console.log('Page created successfully'));
     };
-};
+}
 
-};
+
 
 const answers = new fullPackage().askQuestions();
