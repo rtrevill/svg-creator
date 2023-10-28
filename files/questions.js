@@ -33,4 +33,4 @@ listQuestions = function(){
     };
 };
 
-module.exports =Questions
+module.exports = Questions

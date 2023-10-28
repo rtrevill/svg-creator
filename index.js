@@ -1,6 +1,8 @@
 const { writeFile } = require('fs/promises');
 const inquirer = require('inquirer')
 const Questions = require('./files/questions')
+const Render = require('./files/render')
+
 
 class fullPackage{
 
@@ -9,8 +11,8 @@ askQuestions(){
 inquirer
     .prompt(new Questions().listQuestions())
     .then((name) =>{ 
-        console.log(name);
-        return new fullPackage().renderPage(name.shape, name.colour, name.text, name.textColour);
+
+        return new Render().renderPage(name.shape, name.colour, name.text, name.textColour);
     })
     .catch((e) => {
         console.log(`Something went wrong ${e}`)
