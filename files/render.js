@@ -30,7 +30,7 @@ renderPage = function(shape, colour, text, textColour){
     (shape === 'circle') ? pageBody = optiCirc : 
     (shape === 'square') ? pageBody = optiSquare : pageBody = optiTrian;
 
-    console.log(pageBody);
+    return pageBody;
 
     // else if (shape === 'circle'){
     //     pageBody = 
@@ -55,8 +55,8 @@ renderPage = function(shape, colour, text, textColour){
     //             </svg>`
     // }
  
-    writeFile('logo.svg', pageBody)
-        .then(() => console.log('Generated logo.svg'));
+    // writeFile('logo.svg', pageBody)
+    //     .then(() => console.log('Generated logo.svg'));
     };
 };
 
