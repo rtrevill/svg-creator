@@ -16,17 +16,17 @@ listQuestions = function(){
     {
         type: 'input',
         name: 'colour',
-        message: 'What colour?'
+        message: 'What colour for the shape?'
     },
     {
         type: 'input',
         name: 'text',
         message: 'Please write some text (max 3 letters)',
         validate(value) {
-            if (value.length < 4){
-                return true;
+            if (value.length > 3){
+                return 'Please ensure there are 3 letters Maximum'
             }
-        return 'Please ensure there are 3 letters Maximum'
+        return true;
         },
     },
     {
