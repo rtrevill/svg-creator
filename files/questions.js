@@ -21,7 +21,13 @@ listQuestions = function(){
     {
         type: 'input',
         name: 'text',
-        message: 'Please write some text (max 3 letters)'
+        message: 'Please write some text (max 3 letters)',
+        validate(value) {
+            if (value.length < 4){
+                return true;
+            }
+        return 'Please ensure there are 3 letters Maximum'
+        },
     },
     {
         type: 'input',
