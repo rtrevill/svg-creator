@@ -11,23 +11,21 @@ class FullRender{
     };
 
 fullPage = function(shape, colour, text, textColour){
-    let pageBody = ""
-    
-    let top = new Render.Render().renderTopofPage();
-    console.log(top);
 
+    if ((colour ==="")||(text==="")||(textColour==="")){
+        throw new Error(" All fields need to be filled. Please try again");
+    }
+
+    let pageBody = ""
+    let top = new Render.Render().renderTopofPage();
+    let pageText = new Render.Render().renderText(text, textColour);
 
     (shape === 'circle') ? pageBody = new Render.Circle().renderCirc(shape, colour):
     (shape === 'square') ? pageBody = new Render.Square().renderSquare(colour):
     pageBody = new Render.Triangle().renderTriangle(colour);
-    console.log(pageBody);
-
     
-    let pageText = new Render.Render().renderText(text, textColour);
-    console.log(pageText);
-
     pageBody = (`${top}${pageBody}${pageText}`);
-    console.log(pageBody);
+
 return pageBody;
 };
 
