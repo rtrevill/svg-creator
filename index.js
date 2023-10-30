@@ -11,6 +11,7 @@ inquirer
     .prompt(new Questions().listQuestions())
     .then((name) =>{ 
         return new Render().renderPage(name.shape, name.colour, name.text, name.textColour);
+
     })
     .then((page) => {
         new WriteToFile().fileScribe(page);
