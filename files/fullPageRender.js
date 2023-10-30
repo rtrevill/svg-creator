@@ -1,4 +1,4 @@
-const Render = require('./render');
+const Shape = require('./shape');
 
 
 
@@ -17,12 +17,12 @@ fullPage = function(shape, colour, text, textColour){
     }
 
     let pageBody = ""
-    let top = new Render.Render().renderTopofPage();
-    let pageText = new Render.Render().renderText(text, textColour);
+    let top = new Shape.Shape().renderTopofPage();
+    let pageText = new Shape.Shape().renderText(text, textColour);
 
-    (shape === 'circle') ? pageBody = new Render.Circle().renderCirc(shape, colour):
-    (shape === 'square') ? pageBody = new Render.Square().renderSquare(colour):
-    pageBody = new Render.Triangle().renderTriangle(colour);
+    (shape === 'circle') ? pageBody = new Shape.Circle().renderCirc(shape, colour):
+    (shape === 'square') ? pageBody = new Shape.Square().renderSquare(colour):
+    pageBody = new Shape.Triangle().renderTriangle(colour);
     
     pageBody = (`${top}${pageBody}${pageText}`);
 
