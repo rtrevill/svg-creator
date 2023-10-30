@@ -3,36 +3,37 @@ const Render = require('../files/render')
 describe('Render', () => {
     describe('renderText', () => {
         it('should auto fill the text and text colour correctly', () =>{
-            const color = '<text x="100" y="120" fill="white" transform="" font-size="5rem">Christmas</text></svg>';
+            const textColour = 'white';
+            const textContent = 'Christmas';
             const render = new Render.Render();
-            expect(render.renderText('Christmas','white')).toEqual(color);
+            expect(render.renderText(textContent, textColour)).toEqual('<text x="100" y="120" fill="white" transform="" font-size="5rem">Christmas</text></svg>');
         });
     });
 });
 describe('Circle', () =>{
     describe('renderCirc', () => {
         it('should auto fill shape type and the colour', () =>{
-            const color = '<circle cx="150" cy="100" r="98" stroke="purple" stroke-width="4" fill="purple" />';
+            const shapeColour = 'purple';
             const render = new Render.Circle();
-            expect(render.renderCirc('circle','purple')).toEqual(color);
+            expect(render.renderCirc('circle',shapeColour)).toEqual('<circle cx="150" cy="100" r="98" stroke="purple" stroke-width="4" fill="purple" />');
         });
     });
 });
 describe('Square', () =>{
     describe('renderSquare', () => {
         it('should auto fill the colour correctly', () =>{
-            const color = '<rect x="52" y="2" width="198" height="198" style="fill:orange;stroke:orange;stroke-width:5;fill-opacity:1.0;stroke-opacity:0.9" />';
+            const shapeColour = 'orange';
             const render = new Render.Square();
-            expect(render.renderSquare('orange')).toEqual(color);
+            expect(render.renderSquare(shapeColour)).toEqual('<rect x="52" y="2" width="198" height="198" style="fill:orange;stroke:orange;stroke-width:5;fill-opacity:1.0;stroke-opacity:0.9" />');
         });
     });
 });
 describe('Triangle', () =>{
     describe('renderTriangle', () => {
         it('should auto fill the colour correctly', () =>{
-            const color = '<polygon points="40,200 260,200 150,10" style="fill:yellow;stroke:yellow;stroke-width:1" />';
+            const shapeColour = 'yellow';
             const render = new Render.Triangle();
-            expect(render.renderTriangle('yellow')).toEqual(color);
+            expect(render.renderTriangle(shapeColour)).toEqual('<polygon points="40,200 260,200 150,10" style="fill:yellow;stroke:yellow;stroke-width:1" />');
         });
     });
 });
