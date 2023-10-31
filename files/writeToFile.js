@@ -6,8 +6,10 @@ class WriteToFile{
     }
 
 fileScribe = function(pageBody){
-   writeFile('logo.svg', pageBody);
-   console.log('Generated logo.svg');
+   writeFile('logo.svg', pageBody)
+    .then(console.log('Generated logo.svg'))
+    .catch((e) => {
+        console.log(`Something went wrong with writing the file ${e}`)});
 }
 
 };

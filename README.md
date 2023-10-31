@@ -1,6 +1,6 @@
 # SVG Logo Creator
 
-## Link to Walkthrough Video:  
+## Link to Walkthrough Video:  https://drive.google.com/file/d/16LxTyEhbdgosrCdkQ-7h9surCSyAe2ZV/view
 
 
 
