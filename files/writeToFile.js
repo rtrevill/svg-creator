@@ -1,5 +1,8 @@
+// fs promise method initiated
 const {writeFile} = require('fs/promises');
 
+
+// class with method to output the completed logo.svg file using writefile
 class WriteToFile{
     constructor(pageBody){
         this.pageBody = pageBody;

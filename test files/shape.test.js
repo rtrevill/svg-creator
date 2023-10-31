@@ -1,5 +1,8 @@
 const Shape = require('../files/shape')
 
+// Tests to ensure the render methods in the respective classes operate correctly.
+// This is done by hard coding in data, and testing that the output matches the expected output.
+
 describe('Shape', () => {
     describe('renderText', () => {
         it('should auto fill the text and text colour correctly', () =>{

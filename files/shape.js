@@ -1,3 +1,6 @@
+// Parent class of Shape takes all variables from the inquirer questions.
+// 2 x methods within render the required opening line for the .svg file, and the text to overlay the shapes.
+// These will be the first and last lines in the .svg file 
 
 class Shape{
     constructor(shape, colour, text, textColour){
@@ -19,6 +22,10 @@ renderText = function(text, textColour){
     return;
 };
 
+
+// The Circle, Square and Triangle classes are child classes of the Shapes class.
+// They each share the variables with the parent class. This is done through the super declaration.
+// Through their respective methods, they render the requested shape in the user-requested colour. 
 
 class Circle extends Shape{
     constructor(shape, colour){

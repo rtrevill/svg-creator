@@ -1,3 +1,6 @@
+// Series of questions to be asked at user prompt. Stored as a method within the class of 'Questions'.
+// Formatted to be used by the inquirer package.
+
 class Questions {
 
 listQuestions = function(){
