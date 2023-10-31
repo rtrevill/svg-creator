@@ -1,6 +1,5 @@
 class Questions {
 
-
 listQuestions = function(){
     const qList = [    
     {
