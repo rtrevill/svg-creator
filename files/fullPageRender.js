@@ -1,5 +1,5 @@
 const Shape = require('./shape');
-
+const ValidateColor = require("validate-color").default;
 
 
 class FullRender{
@@ -14,6 +14,9 @@ fullPage = function(shape, colour, text, textColour){
 
     if ((colour ==="")||(text==="")||(textColour==="")){
         throw new Error(" All fields need to be filled. Please try again");
+    }
+    if ((ValidateColor(colour) === false)||(ValidateColor(textColour) === false)){
+        throw new Error(" Please enter valid colour name or Hex code");
     }
 
     let pageBody = ""
